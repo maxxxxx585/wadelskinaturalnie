@@ -252,9 +252,8 @@ body{font-family:'Inter',sans-serif;background:var(--ink);color:var(--cream);ove
 .omnie-role{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-style:italic;color:var(--gold);margin-bottom:3rem;display:block}
 .omnie-bio{font-size:1rem;line-height:1.95;color:var(--muted);font-weight:300;margin-bottom:1.4rem}
 .omnie-creds{display:flex;flex-direction:column;gap:1rem;padding:2rem 0;border-top:1px solid rgba(168,184,106,0.12);border-bottom:1px solid rgba(168,184,106,0.12);margin:2rem 0}
-.omnie-cred{display:flex;gap:1rem;font-size:0.95rem;color:rgba(244,247,236,0.5);font-weight:300;line-height:1.6;align-items:flex-start}
-.omnie-cred span:first-child{flex-shrink:0;width:1.4rem;text-align:center}
-.omnie-cred span:first-child{flex-shrink:0;margin-top:0.1rem}
+.omnie-cred{display:flex;gap:1.1rem;font-size:0.95rem;color:rgba(244,247,236,0.5);font-weight:300;line-height:1.6;align-items:flex-start}
+.omnie-cred span:first-child{flex-shrink:0;width:1.8rem;text-align:center;font-size:1.5rem;margin-top:-0.05rem;opacity:1}
 .omnie-social-row{display:flex;gap:1.8rem;flex-wrap:wrap}
 .omnie-social{font-family:'DM Mono',monospace;font-size:0.75rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);text-decoration:none;opacity:0.85;transition:opacity 0.2s}
 .omnie-social:hover{opacity:1}
@@ -387,12 +386,17 @@ body{font-family:'Inter',sans-serif;background:var(--ink);color:var(--cream);ove
 
 /* ─── FOOTER ─── */
 footer{background:#0A1C10;padding:2.5rem 5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;border-top:1px solid rgba(168,184,106,0.08)}
-.f-logo{font-family:'Cormorant Garamond',serif;font-size:1rem;color:rgba(244,247,236,0.55);letter-spacing:0.06em;display:flex;align-items:center;gap:0.6rem}
-.f-logo-img{width:22px;height:22px;display:block;opacity:0.55;flex-shrink:0}
-.f-logo em{color:var(--gold);font-style:italic;opacity:0.85}
+.f-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:rgba(244,247,236,0.85);letter-spacing:0.05em;display:flex;align-items:center;gap:0.8rem}
+.f-logo-img{width:36px;height:36px;display:block;opacity:0.95;flex-shrink:0}
+.f-logo em{color:var(--gold);font-style:italic;opacity:1}
 .f-copy{font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;color:rgba(244,247,236,0.55);text-align:center}
 .f-copy a{color:rgba(244,247,236,0.55);text-decoration:underline}
 .f-disc{font-size:0.78rem;color:rgba(244,247,236,0.55);line-height:1.75;font-style:italic;max-width:360px;text-align:right}
+.f-credit{display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-top:0.7rem;opacity:0.85;transition:opacity 0.2s}
+.f-credit:hover{opacity:1}
+.f-credit-text{font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.08em;color:rgba(244,247,236,0.55)}
+.f-credit-img{height:24px;width:auto;display:block}
+.f-credit a{display:inline-flex;align-items:center;gap:0.4rem;text-decoration:none}
 
 /* ─── REVEAL ─── */
 .r{opacity:0;transform:translateY(28px);transition:opacity 0.8s ease,transform 0.8s ease}
@@ -510,10 +514,11 @@ footer{background:#0A1C10;padding:2.5rem 5rem;display:flex;align-items:center;ju
 }
 
 /* Magnetic buttons */
-.btn-gold,.btn-dark,.btn-border,.btn-stroke{
+.btn-gold,.btn-dark,.btn-border,.btn-stroke,.n-cta{
   position:relative;overflow:hidden;
   will-change:transform;
 }
+.btn-icon{font-size:1.5em;line-height:1;display:inline-block;vertical-align:middle;margin-right:0.15em}
 .btn-gold::after,.btn-dark::after{
   content:'';position:absolute;top:50%;left:50%;
   width:0;height:0;border-radius:50%;
@@ -715,7 +720,7 @@ footer{background:#0A1C10;padding:2.5rem 5rem;display:flex;align-items:center;ju
     <li><a href="#opinie">Opinie</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
-  <a href="https://wa.me/48669161332?text=Cze%C5%9B%C4%87%20Maksymilian%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20um%C3%B3wi%C4%87%20konsultacj%C4%99%20naturopatyczn%C4%85." target="_blank" class="n-cta">📲 669 161 332</a>
+  <a href="https://wa.me/48669161332?text=Cze%C5%9B%C4%87%20Maksymilian%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20um%C3%B3wi%C4%87%20konsultacj%C4%99%20naturopatyczn%C4%85." target="_blank" class="n-cta"><span class="btn-icon">📲</span> 669 161 332</a>
   <button class="n-ham" id="ham" aria-label="Otwórz menu nawigacji" aria-expanded="false" aria-controls="mob"><span></span><span></span><span></span></button>
 </nav>
 <div class="n-mobile" id="mob">
@@ -727,7 +732,7 @@ footer{background:#0A1C10;padding:2.5rem 5rem;display:flex;align-items:center;ju
   <a href="#kontakt" onclick="cm()">Kontakt</a>
   <a href="#opinie" onclick="cm()">Opinie</a>
   <a href="#faq" onclick="cm()">FAQ</a>
-  <a href="https://wa.me/48669161332?text=Cze%C5%9B%C4%87%20Maksymilian%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20um%C3%B3wi%C4%87%20konsultacj%C4%99%20naturopatyczn%C4%85." target="_blank">📲 Napisz na WhatsApp</a>
+  <a href="https://wa.me/48669161332?text=Cze%C5%9B%C4%87%20Maksymilian%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20um%C3%B3wi%C4%87%20konsultacj%C4%99%20naturopatyczn%C4%85." target="_blank"><span class="btn-icon">📲</span> Napisz na WhatsApp</a>
 </div>
 
 <!-- HERO -->
@@ -740,7 +745,7 @@ footer{background:#0A1C10;padding:2.5rem 5rem;display:flex;align-items:center;ju
     <h1 class="hero-h1" id="hh">Twoje ciało<br>wie, jak <em>wyzdrowieć</em></h1>
     <p class="hero-sub" id="hs">Konsultacje naturopatyczne online łączące tradycyjną medycynę chińską (TCM), ziołolecznictwo, żywienie i suplementację. Naturalne wsparcie zdrowia, które pracuje nad źródłem — nie tylko nad objawami.</p>
     <div class="hero-btns" id="hb">
-      <a href="https://wa.me/48669161332?text=Cze%C5%9B%C4%87%20Maksymilian%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20um%C3%B3wi%C4%87%20konsultacj%C4%99%20naturopatyczn%C4%85." target="_blank" class="btn-gold btn-gold-hero">📲 Umów konsultację</a>
+      <a href="https://wa.me/48669161332?text=Cze%C5%9B%C4%87%20Maksymilian%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20um%C3%B3wi%C4%87%20konsultacj%C4%99%20naturopatyczn%C4%85." target="_blank" class="btn-gold btn-gold-hero"><span class="btn-icon">📲</span> Umów konsultację</a>
     </div>
   </div>
   <div class="hero-scroll"><span>Przewiń</span><div class="scroll-line"></div></div>
@@ -793,7 +798,7 @@ footer{background:#0A1C10;padding:2.5rem 5rem;display:flex;align-items:center;ju
   </div>
   <div class="metoda-synergia r d2">
     <p>"Siła tkwi w połączeniu. Każda metoda wzmacnia pozostałe — TCM wskazuje wzorzec, zioła i suplementy go korygują, żywienie utrwala, a krople Bacha usuwają emocjonalne blokady."</p>
-    <a href="https://wa.me/48669161332?text=Cze%C5%9B%C4%87%20Maksymilian%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20um%C3%B3wi%C4%87%20konsultacj%C4%99%20naturopatyczn%C4%85." target="_blank" class="btn-gold">📲 Umów konsultację</a>
+    <a href="https://wa.me/48669161332?text=Cze%C5%9B%C4%87%20Maksymilian%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20um%C3%B3wi%C4%87%20konsultacj%C4%99%20naturopatyczn%C4%85." target="_blank" class="btn-gold"><span class="btn-icon">📲</span> Umów konsultację</a>
   </div>
 </section>
 
@@ -914,7 +919,7 @@ footer{background:#0A1C10;padding:2.5rem 5rem;display:flex;align-items:center;ju
           <li>Możliwość zadawania pytań po konsultacji</li>
           <li>Pełny zwrot jeśli brak poprawy samopoczucia i wyników</li>
         </ul>
-        <a href="https://wa.me/48669161332?text=Cze%C5%9B%C4%87%20Maksymilian%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20um%C3%B3wi%C4%87%20konsultacj%C4%99%20naturopatyczn%C4%85." target="_blank" class="btn-gold" style="width:100%;justify-content:center;display:flex">📲 Umów konsultację</a>
+        <a href="https://wa.me/48669161332?text=Cze%C5%9B%C4%87%20Maksymilian%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20um%C3%B3wi%C4%87%20konsultacj%C4%99%20naturopatyczn%C4%85." target="_blank" class="btn-gold" style="width:100%;justify-content:center;display:flex"><span class="btn-icon">📲</span> Umów konsultację</a>
         <p class="gwar-disclaimer">Treści na tej stronie mają charakter wyłącznie edukacyjny i informacyjny. Nie stanowią porady medycznej, diagnozy ani propozycji leczenia. Naturalne wsparcie zdrowia nie zastępuje konsultacji z lekarzem.</p>
       </div>
     </div>
@@ -959,8 +964,8 @@ footer{background:#0A1C10;padding:2.5rem 5rem;display:flex;align-items:center;ju
       <div class="kd"><span class="kd-key">Cena</span><span class="kd-val">350 zł · z gwarancją efektów</span></div>
     </div>
     <div class="kontakt-ctas">
-      <a href="https://wa.me/48669161332?text=Cze%C5%9B%C4%87%20Maksymilian%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20um%C3%B3wi%C4%87%20konsultacj%C4%99%20naturopatyczn%C4%85." target="_blank" class="btn-dark">📲 Napisz na WhatsApp</a>
-      <a href="mailto:wadelskinaturalnie@gmail.com" class="btn-stroke">✉️ Wyślij e-maila</a>
+      <a href="https://wa.me/48669161332?text=Cze%C5%9B%C4%87%20Maksymilian%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20um%C3%B3wi%C4%87%20konsultacj%C4%99%20naturopatyczn%C4%85." target="_blank" class="btn-dark"><span class="btn-icon">📲</span> Napisz na WhatsApp</a>
+      <a href="mailto:wadelskinaturalnie@gmail.com" class="btn-stroke"><span class="btn-icon">✉️</span> Wyślij e-maila</a>
     </div>
   </div>
   <div class="r d2">
@@ -1003,7 +1008,7 @@ footer{background:#0A1C10;padding:2.5rem 5rem;display:flex;align-items:center;ju
     </div>
   </div>
   <div class="opinie-cta-row r">
-    <a href="https://wa.me/48669161332?text=Cze%C5%9B%C4%87%20Maksymilian%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20um%C3%B3wi%C4%87%20konsultacj%C4%99%20naturopatyczn%C4%85." target="_blank" class="btn-gold">📲 Dołącz do zadowolonych podopiecznych</a>
+    <a href="https://wa.me/48669161332?text=Cze%C5%9B%C4%87%20Maksymilian%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20um%C3%B3wi%C4%87%20konsultacj%C4%99%20naturopatyczn%C4%85." target="_blank" class="btn-gold"><span class="btn-icon">📲</span> Dołącz do zadowolonych podopiecznych</a>
   </div>
 </section>
 
@@ -1145,7 +1150,14 @@ footer{background:#0A1C10;padding:2.5rem 5rem;display:flex;align-items:center;ju
 <!-- FOOTER -->
 <footer>
   <span class="f-logo"><img src="images/logo-footer.webp" alt="Logo Wadelski Naturalnie" class="f-logo-img" width="22" height="22" loading="lazy">Wadelski <em>Naturalnie</em></span>
-  <div class="f-copy">© 2026 Maksymilian Wadelski · <a href="mailto:wadelskinaturalnie@gmail.com">wadelskinaturalnie@gmail.com</a></div>
+  <div class="f-copy">© 2026 Maksymilian Wadelski · <a href="mailto:wadelskinaturalnie@gmail.com">wadelskinaturalnie@gmail.com</a>
+    <div class="f-credit">
+      <span class="f-credit-text">Projekt i realizacja:</span>
+      <a href="https://inyss-studio.pl" target="_blank" rel="noopener">
+        <img src="images/inyss-logo.png" alt="INYSS Studio" class="f-credit-img" width="150" height="60" loading="lazy">
+      </a>
+    </div>
+  </div>
   <p class="f-disc">Treści na tej stronie mają charakter wyłącznie edukacyjny i informacyjny. Nie stanowią porady medycznej, diagnozy ani propozycji leczenia. Naturalne wsparcie zdrowia nie zastępuje konsultacji z lekarzem.</p>
 </footer>
 
