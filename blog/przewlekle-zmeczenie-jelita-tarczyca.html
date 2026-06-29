@@ -113,6 +113,18 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text-on-
 .art-faq-q{font-weight:600;color:var(--text-on-light);margin-bottom:0.4rem;font-size:1.02rem}
 .art-faq-a{font-size:0.98rem;line-height:1.75;color:var(--text-mid-light);font-weight:300}
 
+/* ─── RELATED ARTICLES ─── */
+.art-related{margin:3.5rem 0}
+.art-related h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--moss);margin-bottom:1.4rem}
+.art-related-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.art-related-card{display:block;background:var(--cream2);padding:1.5rem 1.6rem;text-decoration:none;border-left:3px solid var(--gold);transition:background 0.25s}
+.art-related-card:hover{background:rgba(168,184,106,0.18)}
+.art-related-tag{font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);display:block;margin-bottom:0.5rem}
+.art-related-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--text-on-light);line-height:1.3}
+@media(max-width:600px){
+  .art-related-grid{grid-template-columns:1fr}
+}
+
 /* ─── DISCLAIMER ─── */
 .art-disclaimer{font-size:0.85rem;color:rgba(15,40,24,0.65);line-height:1.8;font-style:italic;margin-top:3rem;padding-top:1.8rem;border-top:1px solid rgba(15,40,24,0.12)}
 
@@ -219,6 +231,20 @@ footer{background:#0A1C10;padding:2.5rem 5rem;display:flex;align-items:center;ju
     <div class="art-faq-item">
       <p class="art-faq-q">Czy jelita naprawdę mogą być przyczyną zmęczenia?</p>
       <p class="art-faq-a">Tak. Zaburzony mikrobiom i stan zapalny jelit to jedna z najczęstszych, choć często pomijanych przyczyn chronicznego zmęczenia.</p>
+    </div>
+  </div>
+
+  <div class="art-related">
+    <h3>Powiązane artykuły</h3>
+    <div class="art-related-grid">
+      <a href="hashimoto-tcm.html" class="art-related-card">
+        <span class="art-related-tag">TCM · Hashimoto</span>
+        <div class="art-related-title">Hashimoto w ujęciu TCM — co kryje się za chorobą tarczycy</div>
+      </a>
+      <a href="jelita-depresja-witamina-d-magnez.html" class="art-related-card">
+        <span class="art-related-tag">Jelita · Mózg · Nastrój</span>
+        <div class="art-related-title">Jelita, witamina D i magnez a depresja — jak mikrobiom wpływa na mózg</div>
+      </a>
     </div>
   </div>
 
