@@ -1,9 +1,7 @@
 // ═══ MICRO-INTERACTIONS INIT ═══
 
-// Add tilt-card class via JS (avoids touching base64 image HTML directly)
 document.querySelectorAll('.m-card, .gwar-price-block').forEach(el => el.classList.add('tilt-card'));
 
-// 3D tilt effect on mouse move
 function attachTilt(el, intensity = 8){
   el.addEventListener('mousemove', (e) => {
     const r = el.getBoundingClientRect();
@@ -19,7 +17,6 @@ function attachTilt(el, intensity = 8){
 }
 document.querySelectorAll('.tilt-card').forEach(el => attachTilt(el, el.classList.contains('gwar-price-block') ? 4 : 8));
 
-// Hero cursor glow follows mouse
 const heroEl = document.getElementById('hero');
 const glowEl = document.getElementById('hero-glow');
 if(heroEl && glowEl){
@@ -30,7 +27,6 @@ if(heroEl && glowEl){
   });
 }
 
-// Floating method-symbol particles — icons referencing the 5 naturopathy methods, drifting across sections
 (function(){
   const containers = [
     document.getElementById('leaf-container'),
@@ -166,7 +162,6 @@ if(heroEl && glowEl){
 })();
 
 
-// Scroll progress bar
 const progressBar = document.createElement('div');
 progressBar.id = 'scroll-progress';
 document.body.appendChild(progressBar);
@@ -176,7 +171,6 @@ window.addEventListener('scroll', () => {
   progressBar.style.width = pct + '%';
 });
 
-// Button ripple effect on click
 document.querySelectorAll('.btn-gold, .btn-dark').forEach(btn => {
   btn.addEventListener('click', () => {
     btn.classList.add('rippling');
@@ -184,12 +178,10 @@ document.querySelectorAll('.btn-gold, .btn-dark').forEach(btn => {
   });
 });
 
-// Nav scroll
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>nav.classList.toggle('dark',scrollY>60));
 if(scrollY>60)nav.classList.add('dark');
 
-// Mobile menu
 const ham=document.getElementById('ham'),mob=document.getElementById('mob');
 ham.addEventListener('click',()=>{
   const isOpen = mob.classList.toggle('open');
@@ -197,7 +189,6 @@ ham.addEventListener('click',()=>{
 });
 function cm(){mob.classList.remove('open')}
 
-// Hero canvas — floating particles (only runs on pages that actually have the canvas hero, i.e. the homepage)
 (function(){
   const c=document.getElementById('hero-canvas');
   if(!c) return;
@@ -247,19 +238,16 @@ function cm(){mob.classList.remove('open')}
   }
 })();
 
-// Hero entrance animation (homepage only — elements are absent on subpages, so guard each)
 ['hp','hh','hs','hb'].forEach((id,i)=>{
   const el=document.getElementById(id);
   if(el) setTimeout(()=>el.classList.add('in'), i===0?0:(i===1?50:(i===2?120:200)));
 });
 
-// Reveal on scroll
 const obs=new IntersectionObserver(entries=>entries.forEach(e=>{
   if(e.isIntersecting)e.target.classList.add('in');
 }),{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.r').forEach(el=>obs.observe(el));
 
-// FAQ accordion
 document.querySelectorAll('[data-faq]').forEach(item=>{
   const btn=item.querySelector('.faq-q');
   const wrap=item.querySelector('.faq-a-wrap');
