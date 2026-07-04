@@ -136,7 +136,7 @@ body{font-family:'Inter',sans-serif;background:var(--ink);color:var(--cream);ove
 .metody-eyebrow-main{font-family:'DM Mono',monospace;font-size:0.8rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1rem}
 .metody-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5vw,4.2rem);font-weight:300;color:var(--cream);line-height:1.1}
 .metody-h2 em{color:var(--gold);font-style:italic}
-.metody-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(168,184,106,0.1)}
+.metody-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:rgba(168,184,106,0.1)}
 .metoda-card{background:var(--ink);padding:2.2rem 1.8rem;transition:background 0.3s}
 .metoda-card:hover{background:rgba(168,184,106,0.04)}
 .metoda-card-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;font-style:italic;color:var(--gold);opacity:0.85;margin-bottom:1rem;display:block}
@@ -680,3 +680,42 @@ a.metoda-card:hover .metoda-card-title{color:var(--gold2)}
 /* --- Kontakt: nie ucinaj długiego maila na krawędzi --- */
 .kd-val{overflow-wrap:anywhere;word-break:break-word}
 .kd-val a{overflow-wrap:anywhere}
+
+/* --- Dolegliwości: klikalne kafelki z artykułami --- */
+.dtile-link{
+  text-decoration:none;
+  position:relative;
+  cursor:pointer;
+}
+.dtile-link::after{
+  content:'→';
+  position:absolute;
+  top:0.5rem;right:0.6rem;
+  font-size:0.75rem;
+  color:var(--gold);
+  opacity:0;
+  transition:opacity 0.25s,transform 0.25s;
+  transform:translateX(-3px);
+}
+.dtile-link:hover::after{opacity:1;transform:translateX(0)}
+.dtile-link:hover{background:rgba(168,184,106,0.14);color:var(--gold2)}
+
+/* --- Homepage tiles: single row on desktop (6 tiles) --- */
+@media(max-width:1480px){
+  .metody-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:800px){
+  .metody-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .metody-grid{grid-template-columns:1fr}
+}
+
+/* --- Kontakt: mniej pustej przestrzeni, blok wyśrodkowany na stronie --- */
+#kontakt{
+  padding:6rem 5rem 7rem;
+  max-width:1320px;
+  margin:0 auto;
+}
+/* --- FAQ: mniej pustej przestrzeni pod pytaniami --- */
+#faq{padding:6rem 5rem 7rem}
