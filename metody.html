@@ -39,6 +39,16 @@ window.addEventListener('load', function(){
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="assets/style.css">
+<style>
+/* Krytyczny CSS inline — omija cache zewnętrznego style.css (GitHub Pages).
+   Gwarantuje, że na telefonie widać wszystkie 5 metod (karta 03 nie ginie). */
+@media(max-width:900px){
+  #metody .metody-grid{grid-template-columns:1fr 1fr !important}
+}
+@media(max-width:820px){
+  #metody .metody-grid{grid-template-columns:1fr !important}
+}
+</style>
 
 </head>
 <body>
