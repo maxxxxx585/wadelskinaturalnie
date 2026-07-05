@@ -41,6 +41,8 @@ window.addEventListener('load', function(){
 <link rel="stylesheet" href="assets/style.css">
 <style>
 #gwarancja .gwar-inner{align-items:center}
+#gwarancja .gwar-steps-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.9rem,3.6vw,2.8rem);color:var(--ink);line-height:1.1;margin-bottom:2.4rem}
+#gwarancja .gwar-steps-title em{color:var(--gold-dark);font-style:italic}
 #gwarancja .gwar-steps{display:flex;flex-direction:column;justify-content:center;gap:2.2rem}
 #gwarancja .gwar-n{font-size:1.9rem;font-family:'Cormorant Garamond',serif;font-weight:600}
 #gwarancja .gwar-t{font-size:1.15rem;line-height:1.55}
@@ -86,10 +88,11 @@ window.addEventListener('load', function(){
 <section id="gwarancja" style="padding-top:1rem">
   <div class="gwar-inner" style="grid-template-columns:1fr 1fr">
     <div class="r">
+      <h2 class="gwar-steps-title">Jak to <em>działa</em></h2>
       <div class="gwar-steps">
         <div class="gwar-step"><span class="gwar-n">01</span><p class="gwar-t">Przystępujesz do konsultacji i stosujesz się do ustaleń przez uzgodniony czas.</p></div>
         <div class="gwar-step"><span class="gwar-n">02</span><p class="gwar-t">Jeśli odczuwasz poprawę samopoczucia — gwarancja jest spełniona.</p></div>
-        <div class="gwar-step"><span class="gwar-n">03</span><p class="gwar-t">Jeśli ani samopoczucie, ani wyniki badań nie pokazują żadnej zmiany — zgłaszasz to do mnie.</p></div>
+        <div class="gwar-step"><span class="gwar-n">03</span><p class="gwar-t">Jeśli ani Twoje samopoczucie, ani wyniki badań nie pokazują żadnej pozytywnej zmiany — zgłaszasz to do mnie.</p></div>
         <div class="gwar-step"><span class="gwar-n">04</span><p class="gwar-t"><strong style="color:var(--ink)">Zwracam pełne 350 zł</strong> — bez negocjacji i bez pytań. Zero wyjątków.</p></div>
       </div>
     </div>
