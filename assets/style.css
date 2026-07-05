@@ -137,7 +137,7 @@ body{font-family:'Inter',sans-serif;background:var(--ink);color:var(--cream);ove
 .metody-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5vw,4.2rem);font-weight:300;color:var(--cream);line-height:1.1}
 .metody-h2 em{color:var(--gold);font-style:italic}
 .metody-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(168,184,106,0.1)}
-.metoda-card{background:var(--ink);padding:2.2rem 1.8rem;transition:background 0.3s}
+.metoda-card{background:var(--ink);padding:2.2rem 1.8rem;transition:background 0.3s;position:relative;z-index:2}
 .metoda-card:hover{background:rgba(168,184,106,0.04)}
 .metoda-card-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;font-style:italic;color:var(--gold);opacity:0.85;margin-bottom:1rem;display:block}
 .metoda-card-title{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;color:var(--cream);line-height:1.25;margin-bottom:0.8rem}
@@ -146,10 +146,10 @@ body{font-family:'Inter',sans-serif;background:var(--ink);color:var(--cream);ove
 @media(max-width:1300px){
   #metody{padding:5rem 2rem 3rem}
 }
-@media(max-width:800px){
+@media(max-width:900px){
   .metody-grid{grid-template-columns:1fr 1fr}
 }
-@media(max-width:600px){
+@media(max-width:680px){
   .metody-grid{grid-template-columns:1fr}
 }
 
@@ -678,8 +678,13 @@ a.metoda-card:hover .metoda-card-title{color:var(--gold2)}
 }
 
 /* --- Kontakt: nie ucinaj długiego maila na krawędzi --- */
-.kd-val{overflow-wrap:anywhere;word-break:break-word}
-.kd-val a{overflow-wrap:anywhere}
+.kd-val{overflow-wrap:break-word;word-break:normal}
+.kd-val a{overflow-wrap:break-word;word-break:normal}
+@media(max-width:600px){
+  .kd{flex-direction:column;gap:0.35rem}
+  .kd-key{width:auto;padding-top:0}
+  .kd-val{font-size:1.15rem}
+}
 
 /* --- Dolegliwości: klikalne kafelki z artykułami --- */
 .dtile-link{
