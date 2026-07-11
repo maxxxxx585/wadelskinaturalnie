@@ -40,20 +40,21 @@ window.addEventListener('load', function(){
 <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="../assets/style.css">
 <style>
-#artykul{max-width:760px;margin:0 auto;padding:1rem clamp(1.2rem,5vw,0) 6rem}
-#artykul h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(1.5rem,2.6vw,2.1rem);color:var(--cream);margin:2.6rem 0 1rem;line-height:1.25}
-#artykul h2 em{color:var(--gold);font-style:italic}
-#artykul p{font-family:'Inter',sans-serif;font-weight:300;font-size:1.02rem;line-height:1.8;color:var(--muted);margin-bottom:1.3rem}
-#artykul strong{color:var(--cream);font-weight:500}
+#art-bg{background:var(--cream)}
+#artykul{max-width:760px;margin:0 auto;padding:4.5rem clamp(1.2rem,5vw,0) 6rem}
+#artykul h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(1.5rem,2.6vw,2.1rem);color:var(--ink);margin:2.6rem 0 1rem;line-height:1.25}
+#artykul h2 em{color:var(--gold-dark);font-style:italic}
+#artykul p{font-family:'Inter',sans-serif;font-weight:300;font-size:1.02rem;line-height:1.8;color:var(--text-mid-light);margin-bottom:1.3rem}
+#artykul strong{color:var(--ink);font-weight:500}
 #artykul ul{margin:0 0 1.5rem 1.2rem;padding:0}
-#artykul li{font-family:'Inter',sans-serif;font-weight:300;font-size:1.02rem;line-height:1.75;color:var(--muted);margin-bottom:.6rem}
-#artykul .pull{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;line-height:1.5;color:var(--cream);border-left:3px solid var(--gold);padding:.3rem 0 .3rem 1.4rem;margin:2.2rem 0}
+#artykul li{font-family:'Inter',sans-serif;font-weight:300;font-size:1.02rem;line-height:1.75;color:var(--text-mid-light);margin-bottom:.6rem}
+#artykul .pull{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;line-height:1.5;color:var(--ink);border-left:3px solid var(--gold-dark);padding:.3rem 0 .3rem 1.4rem;margin:2.2rem 0}
 #artykul .tcm-box{background:var(--moss);border:1px solid rgba(168,184,106,0.3);border-radius:3px;padding:1.6rem 1.8rem;margin:2rem 0}
-#artykul .tcm-box .tcm-label{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.6rem}
-#artykul .tcm-box p{margin-bottom:0;font-size:.98rem;color:var(--cream2)}
-#artykul .art-disclaimer{font-size:.86rem;font-style:italic;color:var(--muted);border-top:1px solid rgba(244,247,236,0.15);padding-top:1.3rem;margin-top:2.6rem}
+#artykul .tcm-box .tcm-label{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);display:block;margin-bottom:.6rem}
+#artykul .tcm-box p{margin-bottom:0;font-size:.98rem;color:var(--cream)}
+#artykul .art-disclaimer{font-size:.86rem;font-style:italic;color:var(--text-mid-light);border-top:1px solid rgba(15,40,24,0.12);padding-top:1.3rem;margin-top:2.6rem}
 #artykul .art-cta{text-align:center;margin:3rem 0 1rem}
-#artykul .art-lead{font-family:'Inter',sans-serif;font-weight:300;font-size:1.08rem;line-height:1.8;color:var(--cream2);margin-bottom:1.3rem}
+#artykul .art-lead{font-family:'Inter',sans-serif;font-weight:300;font-size:1.08rem;line-height:1.8;color:var(--text-on-light);margin-bottom:1.3rem}
 .bhead{display:flex;align-items:center;justify-content:space-between;padding:1.6rem clamp(1.2rem,5vw,3.5rem);border-bottom:1px solid rgba(244,247,236,0.08)}
 .bhead-logo{display:flex;align-items:center;gap:0.7rem;font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--cream);text-decoration:none}
 .bhead-logo img{border-radius:50%}
@@ -82,6 +83,7 @@ window.addEventListener('load', function(){
   <p class="bhero-meta">Maksymilian Wadelski · 11 lipca 2026 · 6 min czytania</p>
 </section>
 
+<div id="art-bg">
 <section id="artykul">
   <p class="art-lead">Migrena po lampce czerwonego wina. Wysypka po pomidorach. Katar bez żadnej alergii w testach. Pozornie trzy różne dolegliwości — a mogą mieć jedno wspólne źródło, o którym mało kto słyszał.</p>
 
@@ -129,6 +131,7 @@ window.addEventListener('load', function(){
     <a href="https://wa.me/48669161332?text=Cze%C5%9B%C4%87%20Maksymilian%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20um%C3%B3wi%C4%87%20konsultacj%C4%99%20naturopatyczn%C4%85." target="_blank" class="btn-gold"><span class="btn-icon">📲</span> Umów konsultację</a>
   </div>
 </section>
+</div>
 
 </main>
 
