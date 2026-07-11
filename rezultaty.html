@@ -161,6 +161,118 @@ window.addEventListener('load', function(){
   </div>
 
   <p class="dowod-desc" style="max-width:760px;margin:2.5rem auto 0;text-align:center;font-size:0.9rem;font-style:italic;color:var(--muted)">Prezentowane przypadki są indywidualne i mają charakter poglądowy. Nie stanowią porady medycznej, diagnozy ani obietnicy lub gwarancji podobnych rezultatów — pokazują, że przy zaangażowaniu i konsekwentnej pracy nad stylem życia organizm potrafi wiele. Reakcja każdego organizmu zależy od wielu czynników.</p>
+
+<!-- ================= OPINIE Z GOOGLE (karuzel) ================= -->
+<!-- JAK EDYTOWAĆ: 1) Wklej treść swoich opinii w tablicy GOPINIE na dole (name, text, date). -->
+<!-- 2) Wstaw swój link do profilu Google w https://share.google/o2x8KsqDxqcHxx7vW (przycisk + "wystaw opinię"). -->
+<section id="gopinie">
+  <div class="gop-head r">
+    <span class="gop-eyebrow">Opinie</span>
+    <h2 class="gop-title">Co mówią <em>podopieczni</em></h2>
+    <div class="gop-badge">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.18a11 11 0 0 0 0 9.88l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
+      <span><b>5,0</b> · Opinie w Google</span>
+    </div>
+  </div>
+
+  <div class="gop-wrap r d1">
+    <button class="gop-arrow gop-prev" type="button" aria-label="Poprzednia opinia">‹</button>
+    <div class="gop-track" id="gopTrack"></div>
+    <button class="gop-arrow gop-next" type="button" aria-label="Następna opinia">›</button>
+  </div>
+
+  <div class="gop-cta r">
+    <a href="https://share.google/o2x8KsqDxqcHxx7vW" target="_blank" rel="noopener" class="btn-stroke gop-btn">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="vertical-align:-3px;margin-right:6px"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.18a11 11 0 0 0 0 9.88l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
+      Zobacz wszystkie opinie w Google →
+    </a>
+  </div>
+</section>
+
+<style>
+#gopinie{padding:5rem clamp(1.2rem,5vw,5rem) 1rem;max-width:1200px;margin:0 auto}
+#gopinie .gop-head{text-align:center;margin-bottom:2.5rem}
+#gopinie .gop-eyebrow{font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-dark)}
+#gopinie .gop-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.9rem,3.6vw,2.8rem);color:var(--ink);line-height:1.1;margin:.5rem 0 1.2rem}
+#gopinie .gop-title em{color:var(--gold-dark);font-style:italic}
+#gopinie .gop-badge{display:inline-flex;align-items:center;gap:.5rem;font-family:'Inter',sans-serif;font-size:.92rem;color:var(--ink)}
+#gopinie .gop-badge b{color:var(--gold-dark)}
+#gopinie .gop-wrap{position:relative;display:flex;align-items:center;gap:.5rem}
+#gopinie .gop-track{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:.5rem .2rem 1.5rem;scrollbar-width:none;-ms-overflow-style:none;flex:1}
+#gopinie .gop-track::-webkit-scrollbar{display:none}
+#gopinie .gop-card{scroll-snap-align:center;flex:0 0 100%;box-sizing:border-box;background:var(--cream,#f7f4ec);border:1px solid rgba(168,184,106,0.25);border-radius:3px;padding:2rem 1.8rem;display:flex;flex-direction:column;gap:.9rem}
+@media(min-width:700px){#gopinie .gop-card{flex-basis:calc(50% - .6rem)}}
+@media(min-width:1000px){#gopinie .gop-card{flex-basis:calc(33.333% - .8rem)}}
+#gopinie .gop-card-top{display:flex;align-items:center;gap:.8rem}
+#gopinie .gop-avatar{width:44px;height:44px;border-radius:50%;background:var(--moss,#3a4a2e);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.3rem;flex:0 0 44px}
+#gopinie .gop-who{display:flex;flex-direction:column;line-height:1.25}
+#gopinie .gop-name{font-family:'Inter',sans-serif;font-weight:500;color:var(--ink);font-size:.98rem}
+#gopinie .gop-date{font-family:'Inter',sans-serif;font-size:.78rem;color:var(--muted,#8a8778)}
+#gopinie .gop-stars{color:#f5b301;letter-spacing:2px;font-size:1rem}
+#gopinie .gop-text{font-family:'Inter',sans-serif;font-weight:300;font-size:.96rem;line-height:1.65;color:#413d34}
+#gopinie .gop-gmark{margin-top:auto;padding-top:.6rem;display:flex;align-items:center;gap:.4rem;font-family:'Inter',sans-serif;font-size:.76rem;color:var(--muted,#8a8778)}
+#gopinie .gop-arrow{flex:0 0 auto;width:42px;height:42px;border-radius:50%;border:1px solid rgba(168,184,106,0.4);background:#fff;color:var(--ink);font-size:1.5rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s}
+#gopinie .gop-arrow:hover{background:var(--gold-dark);color:#fff;border-color:var(--gold-dark)}
+#gopinie .gop-cta{text-align:center;margin-top:1rem}
+#gopinie .gop-btn{display:inline-flex;align-items:center}
+@media(max-width:640px){#gopinie .gop-arrow{width:36px;height:36px;font-size:1.2rem}}
+</style>
+
+<script>
+(function(){
+  /* ====== OPINIE Z GOOGLE ======
+     Fragmenty z twardymi deklaracjami medycznymi skrócone wielokropkiem (...)
+     ze względów prawnych (Lex Szarlatan). Pełne wersje są na profilu Google. */
+  var GOPINIE = [
+    { name:"Ela T", stars:5, date:"2 dni temu", text:"Z całego serca polecam! Pan Maksymilian zajmuje się swoją profesją z wielkim zaangażowaniem oraz pasją. Poświęca dużo czasu swoim pacjentom, aby dokładnie wysłuchać, przeanalizować problem i dobrać indywidualne zalecenia. Od dłuższego czasu stosuję się wraz z mężem do szczegółowych wskazówek (...). Jestem bardzo zadowolona i z czystym sumieniem POLECAM!" },
+    { name:"Agata Kuraś", stars:5, date:"2 dni temu", text:"Polecam serdecznie konsultacje u Pana Wadelskiego. Bardzo profesjonalna, wnikliwa analiza mojego stanu zdrowia, szczegółowe zalecenia. Czułam się zaopiekowana jako pacjentka, z czystym sercem mogę polecić każdemu." },
+    { name:"Manuela Musielak", stars:5, date:"4 dni temu", text:"Cudowny specjalista! Żywe podejście do człowieka, ogrom wiedzy, metod i narzędzi. Wie co robi i czuć, że sam tym żyje. Piękne holistyczne podejście do człowieka i jego procesu. Ponadto ogromne zaangażowanie w to, co robi. Dziękuję Maks ❤️" },
+    { name:"Sylwek Minas", stars:5, date:"4 dni temu", text:"Człowiek z ogromną wiedzą, którego celem jest pomóc. Serdecznie polecam Pana Maksymiliana ze względu na jakość usług, którą oferuje, i serce, które w to wkłada." },
+    { name:"A.", stars:5, date:"4 dni temu", text:"Bardzo merytoryczne i estetyczne przygotowanie. Świadome podejście do zdrowia to temat, który zawsze się obroni. Trzymam kciuki za Twoją misję i pomoc ludziom w powrocie do homeostazy." },
+    { name:"Bogumiła Pomianowska", stars:5, date:"5 dni temu", text:"Maksymilian bardzo mi pomógł (...). Moje wyniki uległy polepszeniu. Szczerze polecam Maksymiliana, bardzo mi pomógł ❤️" },
+    { name:"Magnolia", stars:5, date:"1 tydzień temu", text:"Maksymilian jest bardzo otwartą i komunikatywną osobą. Od samego początku starał się, abym czuła się komfortowo, zadając odpowiednie pytania i przeprowadzając wywiad zapoznawczy. Każda konsultacja przebiegała rzetelnie (...). Jestem wdzięczna za wszystko i bardzo polecam! :)" }
+  ];
+
+  var track = document.getElementById('gopTrack');
+  if(!track) return;
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  GOPINIE.forEach(function(o){
+    var stars = '★★★★★'.slice(0, o.stars||5) + '☆☆☆☆☆'.slice(0, 5-(o.stars||5));
+    var initial = (o.name||'?').trim().charAt(0).toUpperCase();
+    var card = document.createElement('div');
+    card.className = 'gop-card';
+    card.innerHTML =
+      '<div class="gop-card-top">'+
+        '<div class="gop-avatar">'+esc(initial)+'</div>'+
+        '<div class="gop-who"><span class="gop-name">'+esc(o.name)+'</span><span class="gop-date">'+esc(o.date)+'</span></div>'+
+      '</div>'+
+      '<div class="gop-stars" aria-label="Ocena 5 na 5">'+stars+'</div>'+
+      '<p class="gop-text">'+esc(o.text)+'</p>'+
+      '<div class="gop-gmark">'+
+        '<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.18a11 11 0 0 0 0 9.88l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></svg>'+
+        'Opublikowano w Google'+
+      '</div>';
+    track.appendChild(card);
+  });
+
+  var wrap = track.parentElement;
+  function step(){ var c = track.querySelector('.gop-card'); return c ? c.getBoundingClientRect().width + 19 : track.clientWidth; }
+  wrap.querySelector('.gop-next').addEventListener('click', function(){ track.scrollBy({left: step(), behavior:'smooth'}); });
+  wrap.querySelector('.gop-prev').addEventListener('click', function(){ track.scrollBy({left: -step(), behavior:'smooth'}); });
+
+  /* autoplay z pauzą przy interakcji */
+  var timer, paused=false;
+  function auto(){ timer = setInterval(function(){
+    if(paused) return;
+    if(track.scrollLeft + track.clientWidth >= track.scrollWidth - 5){ track.scrollTo({left:0, behavior:'smooth'}); }
+    else { track.scrollBy({left: step(), behavior:'smooth'}); }
+  }, 4500); }
+  ['mouseenter','touchstart','pointerdown'].forEach(function(e){ wrap.addEventListener(e, function(){paused=true;}); });
+  ['mouseleave','touchend'].forEach(function(e){ wrap.addEventListener(e, function(){paused=false;}); });
+  if(GOPINIE.length > 1) auto();
+})();
+</script>
+<!-- ================= /OPINIE Z GOOGLE ================= -->
   <div class="opinie-cta-row r" style="margin-top:2rem">
     <a href="https://wa.me/48669161332?text=Cze%C5%9B%C4%87%20Maksymilian%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20um%C3%B3wi%C4%87%20konsultacj%C4%99%20naturopatyczn%C4%85." target="_blank" class="btn-gold"><span class="btn-icon">📲</span> Umów konsultację</a>
   </div>
