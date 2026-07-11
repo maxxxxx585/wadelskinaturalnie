@@ -41,57 +41,49 @@ window.addEventListener('load', function(){
 <link rel="stylesheet" href="../assets/style.css">
 <style>
 #artykul{max-width:760px;margin:0 auto;padding:1rem clamp(1.2rem,5vw,0) 6rem}
-#artykul h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(1.5rem,2.6vw,2.1rem);color:var(--ink);margin:2.6rem 0 1rem;line-height:1.25}
-#artykul h2 em{color:var(--gold-dark);font-style:italic}
-#artykul p{font-family:'Inter',sans-serif;font-weight:300;font-size:1.02rem;line-height:1.8;color:#413d34;margin-bottom:1.3rem}
-#artykul strong{color:var(--ink);font-weight:500}
+#artykul h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(1.5rem,2.6vw,2.1rem);color:var(--cream);margin:2.6rem 0 1rem;line-height:1.25}
+#artykul h2 em{color:var(--gold);font-style:italic}
+#artykul p{font-family:'Inter',sans-serif;font-weight:300;font-size:1.02rem;line-height:1.8;color:var(--muted);margin-bottom:1.3rem}
+#artykul strong{color:var(--cream);font-weight:500}
 #artykul ul{margin:0 0 1.5rem 1.2rem;padding:0}
-#artykul li{font-family:'Inter',sans-serif;font-weight:300;font-size:1.02rem;line-height:1.75;color:#413d34;margin-bottom:.6rem}
-#artykul .pull{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;line-height:1.5;color:var(--ink);border-left:3px solid var(--gold-dark);padding:.3rem 0 .3rem 1.4rem;margin:2.2rem 0}
-#artykul .tcm-box{background:var(--moss,#f4f1e6);border:1px solid rgba(168,184,106,0.3);border-radius:3px;padding:1.6rem 1.8rem;margin:2rem 0}
-#artykul .tcm-box .tcm-label{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);display:block;margin-bottom:.6rem}
-#artykul .tcm-box p{margin-bottom:0;font-size:.98rem}
-#artykul .art-disclaimer{font-size:.86rem;font-style:italic;color:var(--muted,#8a8778);border-top:1px solid rgba(168,184,106,0.25);padding-top:1.3rem;margin-top:2.6rem}
+#artykul li{font-family:'Inter',sans-serif;font-weight:300;font-size:1.02rem;line-height:1.75;color:var(--muted);margin-bottom:.6rem}
+#artykul .pull{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;line-height:1.5;color:var(--cream);border-left:3px solid var(--gold);padding:.3rem 0 .3rem 1.4rem;margin:2.2rem 0}
+#artykul .tcm-box{background:var(--moss);border:1px solid rgba(168,184,106,0.3);border-radius:3px;padding:1.6rem 1.8rem;margin:2rem 0}
+#artykul .tcm-box .tcm-label{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.6rem}
+#artykul .tcm-box p{margin-bottom:0;font-size:.98rem;color:var(--cream2)}
+#artykul .art-disclaimer{font-size:.86rem;font-style:italic;color:var(--muted);border-top:1px solid rgba(244,247,236,0.15);padding-top:1.3rem;margin-top:2.6rem}
 #artykul .art-cta{text-align:center;margin:3rem 0 1rem}
-#artykul .art-meta{font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.1em;color:var(--muted,#8a8778);text-transform:uppercase;margin-bottom:.4rem}
+#artykul .art-lead{font-family:'Inter',sans-serif;font-weight:300;font-size:1.08rem;line-height:1.8;color:var(--cream2);margin-bottom:1.3rem}
+.bhead{display:flex;align-items:center;justify-content:space-between;padding:1.6rem clamp(1.2rem,5vw,3.5rem);border-bottom:1px solid rgba(244,247,236,0.08)}
+.bhead-logo{display:flex;align-items:center;gap:0.7rem;font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--cream);text-decoration:none}
+.bhead-logo img{border-radius:50%}
+.bhead-logo em{color:var(--gold);font-style:italic}
+.bhead-back{font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid rgba(168,184,106,0.4);padding:0.65rem 1.4rem;transition:all 0.25s;white-space:nowrap}
+.bhead-back:hover{background:var(--gold);color:var(--ink)}
+.bhero{padding:5rem clamp(1.2rem,5vw,3.5rem) 3.5rem;text-align:center;max-width:900px;margin:0 auto}
+.bhero-tags{display:block;font-family:'DM Mono',monospace;font-size:0.78rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.6rem}
+.bhero-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2.1rem,4.6vw,3.6rem);color:var(--cream);line-height:1.2;margin-bottom:1.6rem}
+.bhero-title em{color:var(--gold);font-style:italic}
+.bhero-meta{font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
+@media(max-width:640px){.bhead{padding:1.2rem 1.2rem}.bhead-logo{font-size:1.05rem}.bhero{padding:3.5rem 1.2rem 2.5rem}}
 </style>
 </head>
 <body>
 
-<nav id="nav">
-  <a href="../index.html" class="n-logo"><img src="../images/logo.webp" alt="Logo Wadelski Naturalnie" class="n-logo-img" width="34" height="34">Wadelski <em>Naturalnie</em></a>
-  <ul class="n-links">
-    <li><a href="../metody.html">Metody</a></li>
-    <li><a href="../dolegliwosci.html" class="active">Dolegliwości</a></li>
-    <li><a href="../gwarancja.html">Gwarancja</a></li>
-    <li><a href="../rezultaty.html">Rezultaty</a></li>
-    <li><a href="../o-mnie.html">O mnie</a></li>
-    <li><a href="../faq.html">FAQ</a></li>
-  </ul>
-  <a href="../kontakt.html" class="n-cta"><span class="btn-icon">📲</span> Kontakt</a>
-  <button class="n-ham" id="ham" aria-label="Otwórz menu nawigacji" aria-expanded="false" aria-controls="mob"><span></span><span></span><span></span></button>
-</nav>
-<div class="n-mobile" id="mob">
-  <a href="../metody.html" onclick="cm()">Metody</a>
-  <a href="../dolegliwosci.html" onclick="cm()">Dolegliwości</a>
-  <a href="../gwarancja.html" onclick="cm()">Gwarancja</a>
-  <a href="../rezultaty.html" onclick="cm()">Rezultaty</a>
-  <a href="../o-mnie.html" onclick="cm()">O mnie</a>
-  <a href="../faq.html" onclick="cm()">FAQ</a>
-  <a href="../kontakt.html" onclick="cm()">Kontakt</a>
-  <a href="https://wa.me/48669161332?text=Cze%C5%9B%C4%87%20Maksymilian%2C%20chcia%C5%82bym%2Fchcia%C5%82abym%20um%C3%B3wi%C4%87%20konsultacj%C4%99%20naturopatyczn%C4%85." target="_blank"><span class="btn-icon">📲</span> Napisz na WhatsApp</a>
-</div>
+<header class="bhead">
+  <a href="../index.html" class="bhead-logo"><img src="../images/logo.webp" alt="Logo Wadelski Naturalnie" width="34" height="34">Wadelski <em>Naturalnie</em></a>
+  <a href="../dolegliwosci.html#blog" class="bhead-back">← Wróć do bloga</a>
+</header>
 
 <main>
-<section class="subhero">
-  <p class="subhero-crumb r"><a href="../index.html">Strona główna</a> / <a href="../dolegliwosci.html">Dolegliwości</a> / Nietolerancja histaminy</p>
-  <span class="subhero-eyebrow r">Jelita · Migreny · Skóra</span>
-  <h1 class="r d1">Gdy jelita, migreny<br>i skóra mówią <em>tym samym głosem</em></h1>
-  <p class="subhero-sub r d1">Migrena po lampce czerwonego wina. Wysypka po pomidorach. Katar bez żadnej alergii w testach. Pozornie trzy różne dolegliwości — a mogą mieć jedno wspólne źródło, o którym rzadko się mówi.</p>
+<section class="bhero">
+  <span class="bhero-tags r">TCM · Migreny</span>
+  <h1 class="bhero-title r d1">Gdy jelita, migreny<br>i skóra mówią <em>tym samym głosem</em></h1>
+  <p class="bhero-meta r d1">Maksymilian Wadelski · 11 lipca 2026 · 6 min czytania</p>
 </section>
 
 <section id="artykul">
-  <p class="art-meta">Czas czytania: ok. 6 minut</p>
+  <p class="art-lead">Migrena po lampce czerwonego wina. Wysypka po pomidorach. Katar bez żadnej alergii w testach. Pozornie trzy różne dolegliwości — a mogą mieć jedno wspólne źródło, o którym rzadko się mówi.</p>
 
   <p>Gdybym miał wskazać jeden temat, który najczęściej umyka i pacjentom, i klasycznej diagnostyce, wskazałbym właśnie ten. Bo objawy nietolerancji histaminy są tak rozproszone po całym ciele, że rzadko komukolwiek przychodzi do głowy, żeby połączyć je w jedną całość.</p>
 
