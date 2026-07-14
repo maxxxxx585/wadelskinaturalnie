@@ -11,6 +11,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-YBWPX8XMYR');
+gtag('config', 'AW-18255654057');
 window.addEventListener('load', function(){
   var s = document.createElement('script');
   s.async = true;
@@ -124,5 +125,16 @@ window.addEventListener('load', function(){
 </footer>
 
 <script src="assets/script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function(link){
+    link.addEventListener('click', function(){
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {'send_to': 'AW-18255654057/jZsSCPa7mNAcEKnZ_IBE'});
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>
