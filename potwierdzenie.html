@@ -110,6 +110,17 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text-on-
 .step-desc strong{color:var(--text-on-light);font-weight:600}
 .step-note{font-size:0.9rem;line-height:1.65;color:rgba(15,40,24,0.6);font-style:italic;margin-top:0.9rem}
 
+/* ─── INSTRUKCJA ZDJĘĆ ─── */
+.photo-guide{background:var(--cream2);border-radius:2px;padding:1.4rem 1.5rem;margin:1.2rem 0 0.4rem}
+.photo-item{padding:0.85rem 0;border-bottom:1px solid rgba(15,40,24,0.08)}
+.photo-item:first-child{padding-top:0}
+.photo-item:last-child{border-bottom:none;padding-bottom:0}
+.photo-label{font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dark);display:block;margin-bottom:0.4rem;font-weight:500}
+.photo-item p{font-size:0.97rem;line-height:1.65;color:var(--text-mid-light);font-weight:300}
+.photo-warn{margin-top:0.5rem;color:#8a4a2a !important;font-size:0.9rem !important;font-weight:400 !important}
+.pdf-link{color:var(--gold-dark);text-decoration:none;border-bottom:1px solid rgba(94,104,48,0.4);font-style:normal;font-weight:500}
+.pdf-link:hover{border-bottom-color:var(--gold-dark)}
+
 .btn-step{
   display:inline-flex;align-items:center;gap:0.6rem;
   background:var(--gold);color:var(--ink);
@@ -205,9 +216,26 @@ footer{background:#0A1C10;padding:2.5rem 5rem;display:flex;align-items:center;ju
     <div class="step-num">2</div>
     <div class="step-body">
       <div class="step-title">Prześlij zdjęcia do analizy TCM</div>
-      <p class="step-desc">Potrzebuję <strong>zdjęcia twarzy</strong> oraz <strong>dwóch zdjęć języka</strong>. W instrukcji znajdziesz dokładnie, jak je wykonać — są tam przykładowe zdjęcia i kilka ważnych wskazówek.</p>
-      <a href="instrukcja-zdjecia.pdf" target="_blank" rel="noopener" class="btn-step-alt">Pobierz instrukcję (PDF) →</a>
-      <p class="step-note">Zdjęcia prześlij na WhatsApp, Messengera lub mailem na wadelskinaturalnie@gmail.com. Język fotografujemy rano, na czczo, przed umyciem zębów.</p>
+      <p class="step-desc">Potrzebuję <strong>zdjęcia twarzy</strong> oraz <strong>dwóch zdjęć języka</strong>. Wszystkie wykonaj przy <strong>dziennym świetle</strong>.</p>
+
+      <div class="photo-guide">
+        <div class="photo-item">
+          <span class="photo-label">Zdjęcie 1 — twarz</span>
+          <p>Bez makijażu, bez okularów i innych akcesoriów.</p>
+        </div>
+        <div class="photo-item">
+          <span class="photo-label">Zdjęcie 2 — język na płasko</span>
+          <p>Rano, na czczo, przed umyciem zębów. Wystaw język płasko tak, aby widoczny był również jego korzeń. Najlepiej, gdy zdjęcie wykona druga osoba.</p>
+        </div>
+        <div class="photo-item">
+          <span class="photo-label">Zdjęcie 3 — spód języka</span>
+          <p>Podnieś końcówkę języka do podniebienia tak, aby było widać żyłki pod spodem.</p>
+          <p class="photo-warn">⚠️ Tylko jedna próba — przy wielokrotnym podnoszeniu żyłki mogą błędnie wskazywać na zaburzenia.</p>
+        </div>
+      </div>
+
+      <p class="step-note">Zdjęcia prześlij na WhatsApp, Messengera lub mailem na wadelskinaturalnie@gmail.com.</p>
+      <p class="step-note"><a href="instrukcja-zdjecia.pdf" target="_blank" rel="noopener" class="pdf-link">Pobierz instrukcję ze zdjęciami przykładowymi (PDF) →</a></p>
     </div>
   </div>
 
@@ -230,7 +258,7 @@ footer{background:#0A1C10;padding:2.5rem 5rem;display:flex;align-items:center;ju
           <span class="pay-val">Konsultacja naturopatyczna</span>
         </div>
       </div>
-      <p class="step-note">Konsultacja objęta jest gwarancją satysfakcji — jeśli uznasz, że nie wniosła Ci realnej wartości, zwracam pełną kwotę.</p>
+      <p class="step-note">Konsultacja objęta jest gwarancją satysfakcji.</p>
     </div>
   </div>
 </div>
